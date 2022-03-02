@@ -18,7 +18,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 
+from veridicts.views import home_view
+from veridicts.views import about_view
+
 urlpatterns = [
+    path('', home_view, name='home'),
+    path('about/', about_view, name='about'),
     path('admin/', admin.site.urls),
 ]
 
