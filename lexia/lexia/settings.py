@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -78,10 +79,10 @@ WSGI_APPLICATION = 'lexia.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lexia', 
-        'USER': 'postgres', 
+        'NAME': 'lexia',
+        'USER': 'postgres',
         'PASSWORD': 'password',
-        'HOST': '127.0.0.1', 
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
@@ -128,6 +129,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-FILE_URL = '/file/'
+MEDIA_ROOT = '/files/'
 
-FILE_ROOT = os.path.join(BASE_DIR, 'file')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'files')

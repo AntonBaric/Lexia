@@ -24,7 +24,5 @@ from veridicts.views import about_view
 urlpatterns = [
     path('', home_view, name='home'),
     path('about/', about_view, name='about'),
-    path('admin/', admin.site.urls),
-]
-
-urlpatterns += static(settings.FILE_URL, document_root=settings.FILE_ROOT)
+    path('admin', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
